@@ -10,8 +10,9 @@ body{
 
 .top-menu{
     width: 100%;
-    color: #110130;
-    height: 10px;
+    background-color: #110130;
+    border: 0;
+    height: 50px;
 }
 
 #button {
