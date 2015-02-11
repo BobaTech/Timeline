@@ -1,6 +1,5 @@
 body{
-    background: #FFFFFF;
-    z-index: 0;
+    background: #FFF;
 }
 
 #menu{
@@ -8,11 +7,11 @@ body{
     width: 12.5%;
 }
 
-.top-menu{
-    width: 100%;
+.side-menu{
+    width: 10%;
     background-color: #110130;
-    border: 0;
-    height: 50px;
+    height: 100%;
+    position:absolute;
 }
 
 #button {
