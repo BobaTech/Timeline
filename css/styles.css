@@ -2,15 +2,21 @@ body{
     background: #FFF;
 }
 
-#menu{
+.top-menu{
+    width:100%;
+    background-color: #200259;
+    height: 10%;
     top: 0;
-    width: 12.5%;
+    left: 0;
+    position: absolute;
 }
 
 .side-menu{
     width: 10%;
     background-color: #110130;
     height: 100%;
+    left: 0;
+    top: 0;
     position:absolute;
 }
 
