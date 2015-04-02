@@ -1,7 +1,15 @@
 body{
     background: #FFF;
+    overflow: hidden;
 }
-
+.input{
+    width: 20%;
+    height: 15%;
+    background-color: #200259;
+    top: 40%;
+    left: 40%;
+    position: absolute;
+}
 .top-menu{
     width:100%;
     background-color: #200259;
@@ -17,13 +25,15 @@ body{
     height: 100%;
     left: 0;
     top: 0;
-    position:absolute;
+    position: absolute;
 }
 .ui-slider { 
-    margin-top: 60%;
-    margin-left:15%;
-
+    top: 90%;
+    left:15%;
+    width: 80%;
+    position: absolute;
 }
+
 #button {
     cursor: pointer;
 }
