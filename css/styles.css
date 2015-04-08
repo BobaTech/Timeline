@@ -34,6 +34,12 @@ body{
     position: absolute;
 }
 
+.year-value{
+    top: 15%;
+    left: 90%;
+    position: absolute;
+}
+
 #button {
     cursor: pointer;
 }
