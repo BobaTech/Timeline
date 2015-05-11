@@ -6,6 +6,14 @@ function createSlider(name, a, b){
     });
 }
 
+function createTimeline(a, b){
+    var c = parseInt(a, 10);
+    var d = parseInt(b, 10);
+    var e = b-a;
+    var lineWidth = 20*e;
+    $( "#timeline" ).css("width", lineWidth+'%');
+}
+
 $(document).ready(function(){
     $("#submit").click(function(){
         var a = document.getElementById( "start" ).value;
@@ -17,12 +25,14 @@ $(document).ready(function(){
                     $( "#year" ).val( ui.value );
                 }
             });
+            createTimeline(a, b);
             $( "#year" ).val($( "#slider" ).slider( "value" ) );
             $( "#slider" ).fadeIn();
+            $( "#timeline" ).fadeIn();
             $( ".input" ).fadeOut();
         }
         else{
-            alert("Please enter valid values for both the start and end year");
+            alert("Please enter valid values for both the start and end year.");
         }
     });
 });
