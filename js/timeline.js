@@ -1,10 +1,10 @@
-function createSlider(name, a, b){
+/*function createSlider(name, a, b){
     $(name).slider({
         value: parseInt(a, 10),
         min: parseInt(a, 10),
         max: parseInt(b, 10)
     });
-}
+}*/
 
 function createTimeline(a, b){
     var c = parseInt(a, 10);
@@ -12,6 +12,11 @@ function createTimeline(a, b){
     var e = b-a;
     var lineWidth = 20*e;
     $( "#timeline" ).css("width", lineWidth+'%');
+    $( "#container" ).css({
+        "width": (2*lineWidth-85)+'%',
+        "left": (-1*lineWidth+100)+'%'
+        
+    });
 }
 
 $(document).ready(function(){
@@ -19,16 +24,21 @@ $(document).ready(function(){
         var a = document.getElementById( "start" ).value;
         var b = document.getElementById( "end" ).value;
         if(!isNaN(a) && !isNaN(b) && a.length !== 0  && b.length !== 0){
-            createSlider("#slider", a, b);
+           /* createSlider("#slider", a, b);
             $( "#slider" ).slider({
                 slide: function( event, ui ) {
                     $( "#year" ).val( ui.value );
                 }
-            });
+            }); */
             createTimeline(a, b);
-            $( "#year" ).val($( "#slider" ).slider( "value" ) );
-            $( "#slider" ).fadeIn();
+            //$( "#year" ).val($( "#slider" ).slider( "value" ) );
+            //$( "#slider" ).fadeIn();
             $( "#timeline" ).fadeIn();
+            $( "#timeline" ).draggable({ 
+                axis: "x", 
+                scroll: false,
+                containment: "#container"
+            });
             $( ".input" ).fadeOut();
         }
         else{
